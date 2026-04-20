@@ -22,10 +22,6 @@ def get_task(task_id: int):
         raise HTTPException(status_code=404, detail="Task not found")
     return tasks[task_id]
 
-@app.get("/tasks/{task_id}")
-def get_task(task_id: int):
-    return tasks[task_id]
-
 @app.put("/tasks/{task_id}")
 def update_task(task_id: int, updated_task: Task):
     tasks[task_id] = updated_task
