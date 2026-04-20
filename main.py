@@ -9,7 +9,7 @@ tasks = []
 
 @app.get("/")
 def home():
-    return {"message": "Welcome to Task manager"}
+    return tasks
 
 @app.post("/tasks/")
 def create_task(task:Task):
